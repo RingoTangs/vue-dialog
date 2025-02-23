@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "ES5",
+    "jsx": "preserve",
+    "jsxFactory": "h", // Vue 的 JSX 工厂函数
+    "jsxFragmentFactory": "Fragment", // Vue 的 Fragment 支持
+    "jsxImportSource": "vue",
+    "lib": ["ES2015", "DOM"],
+    "baseUrl": ".",
+    "module": "ES2015",
+    "moduleResolution": "node",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "resolveJsonModule": true,
+    "strict": true,
+    "declaration": true,
+    "declarationDir": "./dist",
+    "emitDeclarationOnly": true,
+    "noEmit": false,
+    "esModuleInterop": true,
+    "skipLibCheck": true
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx"],
+  "exclude": ["node_modules", "dist", "tests"]
+}

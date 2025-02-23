@@ -1,0 +1,49 @@
+.rt_dialog {
+  --animate-duration: 200ms;
+  background-color: rgba(0, 0, 0, 0.45);
+  position: fixed;
+  inset: 0;
+  display: flex;
+  z-index: 99999;
+}
+
+.rt_animated {
+  animation-duration: var(--animate-duration);
+  animation-fill-mode: both;
+}
+
+@keyframes rtKeyframesZoomIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+.rt_animate_zoomIn {
+  animation-name: rtKeyframesZoomIn;
+}
+
+@keyframes rtKeyframesZoomOut {
+  from {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.rt_animate_zoomOut {
+  animation-name: rtKeyframesZoomOut;
+}
