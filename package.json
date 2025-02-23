@@ -1,9 +1,20 @@
 {
   "name": "@ringotangs/vue-dialog",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "imperative dialog for vue3.x",
   "author": "RingoTangs",
+  "publishConfig": {
+    "access": "public"
+  },
   "license": "MIT",
+  "homepage": "https://github.com/RingoTangs/vue-dialog#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RingoTangs/vue-dialog.git"
+  },
+  "bugs": {
+    "url": "https://github.com/RingoTangs/vue-dialog/issues"
+  },
   "keywords": [
     "vue",
     "dialog",
