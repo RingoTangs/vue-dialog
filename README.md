@@ -3,6 +3,7 @@
 Imperative dialog component for Vue 3.x.
 
 ## Features
+
 - Easy to use and integrate.
 - Custom your dialogs.
 - Support Imperative dialog component.
@@ -128,4 +129,8 @@ const [helloModal, ModalHolder] = useHelloModal()
 ## Note
 
 1. When using imperative dialogs, custom components must include the `open` attribute.
-2. In VueDialog, setting `cache-child`  prop means that child nodes will not be re-rendered.
+2. In VueDialog, setting `cache-child` prop means that child nodes will not be re-rendered.
+
+## Demo
+
+![demo](./demo.gif)
