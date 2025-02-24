@@ -3,12 +3,13 @@ import type { ElementHolderRef } from './ElementHolder'
 import { h, ref } from 'vue'
 import { ElementHolder } from './ElementHolder'
 
-type ExtractProps<T> = T extends Component<infer P>
-  ? Partial<Omit<ExtractPublicPropTypes<P>, 'open'>>
-  : never
+type ExtractProps<T> = T extends Component<infer P> ?
+  Partial<Omit<ExtractPublicPropTypes<P>, 'open'>> : never
+
+type ComponentPropsOrFn<T> = ExtractProps<T> | (() => ExtractProps<T>)
 
 interface ShowFn {
-  <T extends Component<object & { open: boolean }>>(component: T, props: ExtractProps<T>): void
+  <T extends Component<object & { open: boolean }>>(component: T, props: ComponentPropsOrFn<T>): void
 }
 
 export function useDialog() {
@@ -19,8 +20,10 @@ export function useDialog() {
   const close = () => {
     open.value = false
   }
+
   const show: ShowFn = (component, props) => {
-    const fc = () => h(component, { ...props, open: open.value })
+    const getFinalProps = () => typeof props === 'function' ? props() : props
+    const fc = () => h(component, { ...getFinalProps(), open: open.value })
     holderRef.value?.setElement(fc)
     setTimeout(() => open.value = true, 0)
   }

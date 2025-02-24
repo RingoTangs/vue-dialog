@@ -1,6 +1,6 @@
 {
   "name": "@ringotangs/vue-dialog",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "imperative dialog for vue3.x",
   "author": "RingoTangs",
   "publishConfig": {
