@@ -1,6 +1,6 @@
 {
   "name": "@ringotangs/vue-dialog",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "imperative dialog for vue3.x",
   "author": "RingoTangs",
   "publishConfig": {
@@ -31,6 +31,7 @@
   },
   "main": "./dist/index.cjs",
   "files": [
+    "demo.gif",
     "dist"
   ],
   "scripts": {
